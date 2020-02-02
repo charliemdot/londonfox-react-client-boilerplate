@@ -31,7 +31,7 @@ const client = {
   // Plugins
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'LondonFox React Boilerplate'
+      template: './src/client/index.html'
     })
   ],
   // Reload On File Change
