@@ -4,7 +4,7 @@
   "description": "A boilerplate for React client projects'",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --open",
+    "dev": "webpack --mode production --watch & npm run start",
     "start": "node ./dist/server.js",
     "build": "webpack --mode production",
     "build-babel": "npm run build-babel-server && npm run build-babel-client",

@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const nodeExternals = require('webpack-node-externals');
+const webpack = require('webpack');
 const path = require('path');
 
 const moduleObj = {
@@ -32,19 +33,16 @@ const client = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/client/index.html'
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin()
   ],
   // Reload On File Change
   watchOptions: {
     ignored: /node_modules/
   },
   // Development Tools (Map Errors To Source File)
-  devtool: 'source-map',
-  devServer: {
-    contentBase: 'dist/public',
-    port: 8000,
-    hotOnly: true
-  }
+  devtool: 'source-map'
 }
 
 const server = {
