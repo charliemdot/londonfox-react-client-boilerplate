@@ -21,3 +21,8 @@ A react boilerplate application for any project type suited for progressive web 
 **$npm run build**
 
 **$npm run start**
+
+
+## Conventions
+
+Prefer named exports over default exports
