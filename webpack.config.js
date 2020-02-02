@@ -47,8 +47,6 @@ const server = {
     'server': './src/server/index.js'
   },
   target: 'node',
-  // Do not minify node js files
-  mode: 'development',
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
