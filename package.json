@@ -1,0 +1,11 @@
+{
+  "name": "londonfox-react-client-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate for React client projects'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charles Markovich",
+  "license": "ISC"
+}

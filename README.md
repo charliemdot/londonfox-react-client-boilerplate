@@ -1,0 +1,1 @@
+A boilerplate for React client projects
