@@ -26,3 +26,5 @@ A react boilerplate application for any project type suited for progressive web 
 ## Conventions
 
 Prefer named exports over default exports
+
+Use only stateless functional components in React
