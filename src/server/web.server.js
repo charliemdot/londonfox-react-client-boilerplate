@@ -1,8 +1,10 @@
-let express = require('express')
+const express = require('express');
+const helmet = require('helmet');
 
 export default class WebServer {
   constructor () {
     this.app = express()
+    this.app.use(helmet());
     this.app.use(express.static('dist/public'))
   }
 
