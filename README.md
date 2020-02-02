@@ -10,7 +10,7 @@ A react boilerplate application for any project type suited for progressive web 
 
 **Helmet** - for added security
 
-**Apollo / GraphQL** - supports GraphQL and Apollo for local state management
+**Apollo Boost** - for GraphQL support along with local state management and several other helpful utilities
 
 **Optimized Dev Mode** - for local development
 
