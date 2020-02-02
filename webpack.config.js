@@ -40,6 +40,11 @@ const client = {
   },
   // Development Tools (Map Errors To Source File)
   devtool: 'source-map',
+  devServer: {
+    contentBase: 'dist/public',
+    port: 8000,
+    hotOnly: true
+  }
 }
 
 const server = {
