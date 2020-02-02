@@ -12,7 +12,7 @@ export default class WebServer {
     return new Promise((resolve, reject) => {
       try {
         this.server = this.app.listen(3000, function () {
-          console.log('Server running on http://localhost:3000/')
+          console.log('Server started on http://localhost:3000/')
           resolve()
         })
       } catch (e) {
