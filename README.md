@@ -1,1 +1,3 @@
-A boilerplate for React client projects
+# React-BoilerplateThis is my react-boilerplate
+
+## Setupnpm installnpm run buildnpm start
