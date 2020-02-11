@@ -22,6 +22,9 @@ A react boilerplate application for any project type suited for progressive web 
 
 **$npm run start**
 
+## File System Architecture
+
+
 
 ## Conventions
 
