@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { GlobalLayout } from './containers/layouts/global';
 
 const client = new ApolloClient({
-  uri: 'https://48p1r2roz4.sse.codesandbox.io',
+  uri: 'http://localhost:8001/api',
 });
 
 const App = () => (
