@@ -5,13 +5,13 @@ const Header = styled.div`
   backgroundcolor:#ccc;
 `;
 
-export const Home = () => (
+export const Dashboard = () => (
   <Fragment>
     <Header>
-      Home
+      Dashboard
     </Header>
     <p>
-      Hello World!
+      Dashboard content here.
     </p>
   </Fragment>
 );

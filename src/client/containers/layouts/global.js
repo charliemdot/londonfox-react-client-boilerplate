@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Reset } from 'styled-reset'
 
 import { Home } from '../pages/home';
+import { Dashboard } from '../pages/dashboard';
 
 const GlobalLayoutWrapper = styled.div`
   background-color:#ccc;
@@ -10,6 +12,7 @@ const GlobalLayoutWrapper = styled.div`
 
 export const GlobalLayout = () => (
     <GlobalLayoutWrapper>
+      <Reset />
       <Router>
         <div>
           <ul>
@@ -35,7 +38,7 @@ export const GlobalLayout = () => (
               <Home />
             </Route>
             <Route path="/dashboard">
-              <div>Dashboard component here...</div>
+              <Dashboard />
             </Route>
           </Switch>
         </div>
