@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const GlobalLayoutWrapper = styled.div`
-  background-color:#ccc;
+const HomeContainer = styled.div`
+  backgroundcolor:#ccc;
 `;
 
-export const GlobalLayout = () => (
-    <GlobalLayoutWrapper>
+export const Home = () => (
+    <HomeContainer>
       <h2>Hello Charles!</h2>
-    </GlobalLayoutWrapper>
+    </HomeContainer>
 );
