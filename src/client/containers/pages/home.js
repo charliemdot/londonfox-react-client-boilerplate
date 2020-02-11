@@ -1,17 +1,16 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components';
 
-const Header = styled.div`
-  backgroundcolor:#ccc;
-`;
+import { Title } from '../../components/title'
+import { Content } from '../../components/content'
 
 export const Home = () => (
   <Fragment>
-    <Header>
-      Home
-    </Header>
-    <p>
+    <Title>
+      Home Title
+    </Title>
+    <Content>
       Hello World!
-    </p>
+    </Content>
   </Fragment>
 );
