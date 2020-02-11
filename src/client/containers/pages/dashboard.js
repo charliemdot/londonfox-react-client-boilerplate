@@ -32,8 +32,6 @@ export const Dashboard = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
-  console.log('Data is:', data);
-
   return (
     <Fragment>
       <Title>
