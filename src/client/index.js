@@ -9,7 +9,7 @@ import { createGlobalStyle } from 'styled-components'
 import { GlobalLayout } from './containers/layouts/global';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:8001/api',
+  uri: 'https://namify-api-service-prod.herokuapp.com/api',
 });
 
 const GlobalStyle = createGlobalStyle`
