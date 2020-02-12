@@ -6,7 +6,7 @@ import { Home } from '../pages/home';
 import { Dashboard } from '../pages/dashboard';
 
 const GlobalLayoutWrapper = styled.div`
-  background-color:#efefef;
+  background-color: #efefef;
 `;
 
 export const GlobalLayout = () => (
@@ -21,8 +21,6 @@ export const GlobalLayout = () => (
               <Link to="/dashboard">Dashboard</Link>
             </li>
           </ul>
-
-          <hr />
 
           <Switch>
             <Route exact path="/">
