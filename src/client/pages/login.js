@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { useLazyQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 
+import { AUTH_TOKEN } from '../utils/constants';
+
 import { Title } from '../components/title'
 import { Content } from '../components/content'
 
@@ -42,7 +44,7 @@ export const Login = () => {
 
       setFormError(false);
 
-      console.log('Set token now in all headers with:', token);
+      localStorage.setItem(AUTH_TOKEN, token);
     }
   };
 
