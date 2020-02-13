@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
-import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
+import { Login } from '../pages/login';
 import { Home } from '../pages/home';
 import { Dashboard } from '../pages/dashboard';
 
@@ -15,18 +16,24 @@ export const GlobalLayout = () => (
         <div>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to='/'>Home</Link>
             </li>
             <li>
-              <Link to="/dashboard">Dashboard</Link>
+              <Link to='/login'>Login</Link>
+            </li>
+            <li>
+              <Link to='/dashboard'>Dashboard</Link>
             </li>
           </ul>
 
           <Switch>
-            <Route exact path="/">
+            <Route exact path='/'>
               <Home />
             </Route>
-            <Route path="/dashboard">
+            <Route path='/login'>
+              <Login />
+            </Route>
+            <Route path='/dashboard'>
               <Dashboard />
             </Route>
           </Switch>

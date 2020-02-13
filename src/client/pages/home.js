@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components';
 
-import { Title } from '../../components/title'
-import { Content } from '../../components/content'
+import { Title } from '../components/title'
+import { Content } from '../components/content'
 
 export const Home = () => (
   <Fragment>

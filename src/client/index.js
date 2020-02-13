@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { Reset } from 'styled-reset'
 import { createGlobalStyle } from 'styled-components'
 
-import { GlobalLayout } from './containers/layouts/global';
+import { GlobalLayout } from './layouts/global';
 
 const client = new ApolloClient({
   uri: 'https://namify-api-service-prod.herokuapp.com/api',

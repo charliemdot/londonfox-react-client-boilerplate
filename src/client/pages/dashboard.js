@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 
-import { Title } from '../../components/title'
-import { Content } from '../../components/content'
+import { Title } from '../components/title'
+import { Content } from '../components/content'
 
 const PROPERTIES = gql`
   {
