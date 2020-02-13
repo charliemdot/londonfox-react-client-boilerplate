@@ -35,7 +35,7 @@ export const GlobalLayout = () => {
                     onClick={(e) => {
                       e.preventDefault();
                       localStorage.removeItem(AUTH_TOKEN);
-                      // history.push(`/`);
+                      // TODO!  Do redirect back a page here!!!
                     }}
                   >
                     Sign Out
