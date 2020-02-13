@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react'
 import styled from 'styled-components';
 import { useLazyQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
+import { useHistory } from 'react-router-dom';
 
 import { AUTH_TOKEN } from '../utils/constants';
 
@@ -22,6 +23,7 @@ export const Login = () => {
   const [password, setPassword] = useState('');
   const [formError, setFormError] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const history = useHistory();
 
   useEffect(() => {
     if (email.trim() && password.trim()) {
@@ -45,6 +47,7 @@ export const Login = () => {
       setFormError(false);
 
       localStorage.setItem(AUTH_TOKEN, token);
+      history.push('/');
     }
   };
 

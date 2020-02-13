@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components';
-import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, Link, useHistory } from 'react-router-dom';
 
 import { AUTH_TOKEN } from '../utils/constants';
 
@@ -14,8 +14,24 @@ const GlobalLayoutWrapper = styled.div`
   background-color: #efefef;
 `;
 
+const AuthButton = () => {
+  const history = useHistory();
+
+  return (
+    <a
+      href='/'
+      onClick={(e) => {
+        e.preventDefault();
+        localStorage.removeItem(AUTH_TOKEN);
+        history.push('/');
+      }}
+    >
+      Sign Out
+    </a>
+  );
+};
+
 export const GlobalLayout = () => {
-  // Render
   return (
     <GlobalLayoutWrapper>
       <Router>
@@ -30,16 +46,7 @@ export const GlobalLayout = () => {
                   <Link to='/dashboard'>Dashboard</Link>
                 </li>
                 <li>
-                  <a
-                    href='/'
-                    onClick={(e) => {
-                      e.preventDefault();
-                      localStorage.removeItem(AUTH_TOKEN);
-                      // TODO!  Do redirect back a page here!!!
-                    }}
-                  >
-                    Sign Out
-                  </a>
+                  <AuthButton />
                 </li>
               </Fragment>
             ) : (
