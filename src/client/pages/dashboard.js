@@ -18,8 +18,6 @@ const CURRENT_USER_QUERY = gql`
 export const Dashboard = () => {
   const { loading, error, data } = useQuery(CURRENT_USER_QUERY);
 
-  console.log('data:', data);
-
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
