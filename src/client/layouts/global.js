@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { HashRouter as Router, Switch, Route, Link, Redirect, useHistory } from 'react-router-dom';
 
 import { AUTH_TOKEN } from '../utils/constants';
-
 import { Login } from '../pages/login';
 import { Home } from '../pages/home';
 import { Dashboard } from '../pages/dashboard';

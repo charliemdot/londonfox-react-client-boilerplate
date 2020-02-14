@@ -5,7 +5,6 @@ import { gql } from 'apollo-boost';
 import { useHistory } from 'react-router-dom';
 
 import { AUTH_TOKEN } from '../utils/constants';
-
 import { Title } from '../components/title'
 import { Content } from '../components/content'
 
