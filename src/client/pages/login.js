@@ -48,6 +48,7 @@ export const Login = () => {
 
       localStorage.setItem(AUTH_TOKEN, token);
       history.push('/');
+      location.reload();
     }
   };
 

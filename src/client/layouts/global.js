@@ -24,6 +24,7 @@ const LogoutLink = () => {
         e.preventDefault();
         localStorage.removeItem(AUTH_TOKEN);
         history.push('/');
+        location.reload();
       }}
     >
       Sign Out
