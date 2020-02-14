@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components';
 import { useQuery } from '@apollo/react-hooks';
-import { gql } from 'apollo-boost';
+import gql from 'graphql-tag';
 
 import { Title } from '../components/title'
 import { Content } from '../components/content'

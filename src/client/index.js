@@ -1,25 +1,10 @@
 import React from 'react'
 import ReactDOM from "react-dom";
-
-
-
-// OLD - REMOVE!!!
-/*
-import { ApolloProvider } from '@apollo/react-hooks';
-import ApolloClient from 'apollo-boost';
-*/
-
-
-
-// NEW - KEEP!!!
 import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { createHttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { setContext } from 'apollo-link-context';
-
-
-
 import { Reset } from 'styled-reset'
 import { createGlobalStyle } from 'styled-components'
 

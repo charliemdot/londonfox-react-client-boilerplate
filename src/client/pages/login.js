@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import styled from 'styled-components';
 import { useLazyQuery } from '@apollo/react-hooks';
-import { gql } from 'apollo-boost';
+import gql from 'graphql-tag';
 import { useHistory } from 'react-router-dom';
 
 import { AUTH_TOKEN } from '../utils/constants';
