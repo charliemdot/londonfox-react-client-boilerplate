@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components';
-import { HashRouter as Router, Switch, Route, Link, useHistory } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, Link, Redirect, useHistory } from 'react-router-dom';
 
 import { AUTH_TOKEN } from '../utils/constants';
 
@@ -14,7 +14,7 @@ const GlobalLayoutWrapper = styled.div`
   background-color: #efefef;
 `;
 
-const AuthButton = () => {
+const LogoutLink = () => {
   const history = useHistory();
 
   return (
@@ -31,6 +31,28 @@ const AuthButton = () => {
   );
 };
 
+// A wrapper for <Route> that redirects to the login
+// screen if you're not yet authenticated.
+const  PrivateRoute = ({ children, ...rest }) => {
+  return (
+    <Route
+      {...rest}
+      render={({ location }) =>
+      authToken ? (
+          children
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/login",
+              state: { from: location }
+            }}
+          />
+        )
+      }
+    />
+  );
+}
+
 export const GlobalLayout = () => {
   return (
     <GlobalLayoutWrapper>
@@ -46,12 +68,12 @@ export const GlobalLayout = () => {
                   <Link to='/dashboard'>Dashboard</Link>
                 </li>
                 <li>
-                  <AuthButton />
+                  <LogoutLink />
                 </li>
               </Fragment>
             ) : (
               <li>
-                <Link to='/login'>Login</Link>
+                <Link to='/login'>Sign In</Link>
               </li>
             )}
           </ul>
@@ -60,15 +82,12 @@ export const GlobalLayout = () => {
             <Route exact path='/'>
               <Home />
             </Route>
-            {authToken ? (
-              <Route path='/dashboard'>
-                <Dashboard />
-              </Route>
-            ) : (
-              <Route path='/login'>
-                <Login />
-              </Route>
-            )}
+            <PrivateRoute path='/dashboard'>
+              <Dashboard />
+            </PrivateRoute>
+            <Route path='/login'>
+              <Login />
+            </Route>
           </Switch>
         </div>
       </Router>
