@@ -6,28 +6,19 @@ import { gql } from 'apollo-boost';
 import { Title } from '../components/title'
 import { Content } from '../components/content'
 
-const PROPERTIES = gql`
-  {
-    properties{
-      title
-      city
-      propertyId
-      availability {
-        date
-        price
-      }
+const CURRENT_USER_QUERY = gql`
+  query CurrentUser {
+    me {
+      firstName
+      lastName
     }
   }
 `;
 
-const formatProperties = ({ properties }) => {
-  return properties.map(({title}) => (
-    <div>{title}</div>
-  ));
-};
-
 export const Dashboard = () => {
-  const { loading, error, data } = useQuery(PROPERTIES);
+  const { loading, error, data } = useQuery(CURRENT_USER_QUERY);
+
+  console.log('data:', data);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
@@ -38,7 +29,17 @@ export const Dashboard = () => {
         Dashboard Title
       </Title>
       <Content>
-        {formatProperties(data)}
+        <p>User Details</p>
+        <ul>
+          <li>
+            First Name -
+            {data.me.firstName}
+          </li>
+          <li>
+            Last Name -
+            {data.me.lastName}
+          </li>
+        </ul>
       </Content>
     </Fragment>
   );
