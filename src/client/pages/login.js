@@ -1,12 +1,12 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { Fragment, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useLazyQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 import { useHistory } from 'react-router-dom';
 
 import { AUTH_TOKEN } from '../utils/constants';
-import { Title } from '../components/title'
-import { Content } from '../components/content'
+import { Title } from '../components/title';
+import { Content } from '../components/content';
 
 const LOGIN_QUERY = gql`
   query Login ($email: String!, $password: String!) {
@@ -69,32 +69,32 @@ export const Login = () => {
       </Title>
       <Content>
         <div>
-          {formError &&
-            <span>Invalid Credentials!</span>
+          {formError
+            && <span>Invalid Credentials!</span>
           }
         </div>
         <div>
-          <label for='fname'>First name</label>
+          <label htmlFor='fname'>First name</label>
           <input
             id='email'
             type='text'
             label='Email'
             placeholder='Email'
             required
-            onChange={(e)=>setEmail(e.target.value)}
-            onKeyPress={(e)=>handleKeyPress(e)}
+            onChange={(e) => setEmail(e.target.value)}
+            onKeyPress={(e) => handleKeyPress(e)}
           />
         </div>
 
         <div>
-          <label for='fname'>Password</label>
+          <label htmlFor='fname'>Password</label>
           <input
             id='password'
             type='password'
             label='Password'
             placeholder='Password'
-            onChange={(e)=>setPassword(e.target.value)}
-            onKeyPress={(e)=>handleKeyPress(e)}
+            onChange={(e) => setPassword(e.target.value)}
+            onKeyPress={(e) => handleKeyPress(e)}
           />
         </div>
 
@@ -105,7 +105,7 @@ export const Login = () => {
               variables: {
                 email,
                 password,
-              }
+              },
             })}>
             Sign In
           </button>
@@ -113,4 +113,4 @@ export const Login = () => {
       </Content>
     </Fragment>
   );
-}
+};

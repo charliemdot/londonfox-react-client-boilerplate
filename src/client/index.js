@@ -23,7 +23,7 @@ const authLink = setContext((_, { headers }) => {
       ...headers,
       'x-token': token,
     },
-  },
+  };
 });
 
 const client = new ApolloClient({

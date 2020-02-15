@@ -1,6 +1,8 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import { HashRouter as Router, Switch, Route, Link, Redirect, useHistory } from 'react-router-dom';
+import {
+  HashRouter as Router, Switch, Route, Link, Redirect, useHistory,
+} from 'react-router-dom';
 
 import { AUTH_TOKEN } from '../utils/constants';
 import { Login } from '../pages/login';
@@ -33,28 +35,24 @@ const LogoutLink = () => {
 
 // A wrapper for <Route> that redirects to the login
 // screen if you're not yet authenticated.
-const  PrivateRoute = ({ children, ...rest }) => {
-  return (
+const PrivateRoute = ({ children, ...rest }) => (
     <Route
       {...rest}
-      render={({ location }) =>
-      authToken ? (
-          children
-        ) : (
+      render={({ location }) => (authToken ? (
+        children
+      ) : (
           <Redirect
             to={{
-              pathname: "/login",
-              state: { from: location }
+              pathname: '/login',
+              state: { from: location },
             }}
           />
-        )
+      ))
       }
     />
-  );
-}
+);
 
-export const GlobalLayout = () => {
-  return (
+export const GlobalLayout = () => (
     <GlobalLayoutWrapper>
       <Router>
         <div>
@@ -92,4 +90,4 @@ export const GlobalLayout = () => {
         </div>
       </Router>
     </GlobalLayoutWrapper>
-)};
+);

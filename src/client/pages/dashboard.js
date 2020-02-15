@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
-import { Title } from '../components/title'
-import { Content } from '../components/content'
+import { Title } from '../components/title';
+import { Content } from '../components/content';
 
 const CURRENT_USER_QUERY = gql`
   query CurrentUser {
@@ -41,4 +41,4 @@ export const Dashboard = () => {
       </Content>
     </Fragment>
   );
-}
+};

@@ -1,7 +1,7 @@
-import server from './web.server'
+import server from './web.server';
 
-let webserver = new server();
+const webserver = new server();
 
 webserver.start(() => {
-  console.log('Webserver started!')
+  console.log('Webserver started!');
 });

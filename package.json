@@ -12,7 +12,7 @@
     "build-babel-client": "babel src/client --copy-files --out-dir ./dist/public",
     "clean": "rimraf dist node_modules",
     "test": "jest ./src",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src --fix"
   },
   "repository": {
     "type": "git",
