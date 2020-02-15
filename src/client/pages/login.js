@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import styled from 'styled-components';
 import { useLazyQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 import { useHistory } from 'react-router-dom';
@@ -9,7 +8,7 @@ import { Title } from '../components/title';
 import { Content } from '../components/content';
 
 const LOGIN_QUERY = gql`
-  query Login ($email: String!, $password: String!) {
+  mutation Login ($email: String!, $password: String!) {
     login (email: $email, password: $password) {
       token
     }
